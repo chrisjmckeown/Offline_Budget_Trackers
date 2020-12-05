@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,39 +10,64 @@
 
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="styles.css">
+  <script src="https://kit.fontawesome.com/0f27892f85.js" crossorigin="anonymous"></script>
 
   <title>Budget Tracker</title>
 </head>
+
 <body>
   <div class="wrapper">
-    <div class="total">
-      <div class="total">Your total is: $<span id="total">0</span></div>
-    </div>
+    <!-- Semantic header -->
+    <header class="header">
+        <h1>Budget Tracker</h1>
+    </header>
+    <!-- Semantic main body -->
+    <main class="main">
+      <div class="wrapper">
+        <div class="total">
+          <div class="total">Your total is: $<span id="total">0</span></div>
+        </div>
 
-    <div class="form">
-      <input type="text" id="t-name" placeholder="Name of transaction" />
-      <input type="number" min="0" id="t-amount" placeholder="Transaction amount" />
-      <button id="add-btn"><i class="fa fa-plus buttons"></i> Add Funds</button>
-      <button id="sub-btn"><i class="fa fa-minus"></i> Subtract Funds</button>
-      <p class="error"></p>
-    </div>
+        <div class="form">
+          <input type="text" id="t-name" placeholder="Name of transaction" />
+          <input type="number" min="0" id="t-amount" placeholder="Transaction amount" />
+          <button id="add-btn"><i class="fa fa-plus buttons"></i> Add Funds</button>
+          <button id="sub-btn"><i class="fa fa-minus"></i> Subtract Funds</button>
+          <p class="error"></p>
+        </div>
 
-    <div class="transactions">
-      <table>
-        <thead>
-          <th>Transaction</th>
-          <th>Amount</th>
-        </thead>
-        <tbody id="tbody">
-          
-        </tbody>
-      </table>
-    </div>
-    
-    <canvas id="myChart"></canvas>
+        <div class="transactions">
+          <table>
+            <thead>
+              <th>Transaction</th>
+              <th>Amount</th>
+            </thead>
+            <tbody id="tbody">
+
+            </tbody>
+          </table>
+        </div>
+
+        <canvas id="myChart"></canvas>
+
+    </main>
+    <!-- Semantic footer -->
+    <footer class="footer">
+      <!-- div for social media -->
+      <div class="copyright-social-media">
+        <span><a href="https://github.com/chrisjmckeown/Offline_Budget_Trackers/blob/master/LICENSE"
+            target="_blank">&#169;
+            2020</a> - Chris Mckeown - </span>
+        <a href="https://www.linkedin.com/in/chrisjmckeown/" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://twitter.com/ChrisMckeown6" target="_blank"><i class="fab fa-twitter-square"></i></a>
+        <a href="https://www.facebook.com/christopher.j.mckeown.3" target="_blank"><i
+            class="fab fa-facebook-square"></i></a>
+        <a href="https://github.com/chrisjmckeown" target="_blank"> <i class="fab fa-github-square"></i></a>
+      </div>
+    </footer>
   </div>
-
   <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
   <script src="index.js"></script>
 </body>
+
 </html>

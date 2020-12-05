@@ -1,3 +1,72 @@
+/********** Colour reference chart*********
+*************************** colour *******/ 
+:root {
+  --blue: rgb(78, 125, 155);
+  --light-blue: rgb(108, 167, 204);
+  --grey: rgb(161,164,167);
+  --green: rgb(79,173,67);
+  --brown: rgb(195, 110, 41);
+}
+
+html,
+body {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  max-width: 1080px; 
+  margin: 0 auto; 
+  height: 100%;
+  text-align: center;
+}
+/* styling the header */
+.header {
+  background-color:var(--blue);
+  flex: 0 1 auto;
+  width: 100%;
+  color: white;
+  height: 80px;
+  justify-content: center; /* For horizontal alignment */
+  align-items: center; /* For vertical alignment */
+}
+/* styling the main */
+.main {
+  flex: 1 1 auto;
+  background-color: white;
+  width: 100%;
+}
+/* styling the footer */
+.footer {
+  flex: 0 1 auto;
+  width: 100%;
+  background-color:var(--blue);
+}
+
+/* setting footer styles */
+.footer .copyright-social-media {
+  margin: 0 auto;
+  height: 40px;
+  display: flex;
+  justify-content: center; /* For horizontal alignment */
+  align-items: center; /* For vertical alignment */
+}
+
+/* social media div */
+.footer, .footer .copyright-social-media a{
+  font-size: 20px;
+  color: white;
+}
+.footer .copyright-social-media a{
+  padding-left: 10px;
+  text-decoration: none;
+}
+.footer .copyright-social-media a:hover{
+  color: var(--green);
+}
+
 body {
   font-size: 120%;
   font-family: Arial;
@@ -24,12 +93,6 @@ tr:nth-child(even) {
 
 .error {
   color: red;
-}
-
-.wrapper {
-  margin: 0 auto;
-  max-width: 825px;
-  text-align: center;
 }
 
 .total {
