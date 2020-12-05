@@ -1,9 +1,9 @@
 const FILES_TO_CACHE = [
-  "/", 
-  "/index.html", 
-  "/db.js", 
-  "/index.js", 
-  "/styles.css", 
+  "/",
+  "/index.html",
+  "/db.js",
+  "/index.js",
+  "/styles.css",
   "/favicon.ico",
   "/icons/icon-192x192.png",
   "/icons/icon-512x512.png",
@@ -13,7 +13,7 @@ const CACHE_NAME = "bt_static-cache-v2";
 const DATA_CACHE_NAME = "bt_data-cache-v1";
 
 // install
-self.addEventListener("install", function (evt) {
+self.addEventListener("install", (evt) => {
   evt.waitUntil(
     caches.open(CACHE_NAME).then((cache) => {
       console.log("Your files were pre-cached successfully!");
@@ -25,7 +25,7 @@ self.addEventListener("install", function (evt) {
 });
 
 // activate
-self.addEventListener("activate", function (evt) {
+self.addEventListener("activate", (evt) => {
   evt.waitUntil(
     caches.keys().then((keyList) => {
       return Promise.all(
@@ -43,7 +43,7 @@ self.addEventListener("activate", function (evt) {
 });
 
 // fetch
-self.addEventListener("fetch", function (evt) {
+self.addEventListener("fetch", (evt) => {
   if (evt.request.url.includes("/api/")) {
     evt.respondWith(
       caches
